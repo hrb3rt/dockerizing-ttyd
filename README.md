@@ -1,10 +1,25 @@
 # dockerizing-ttyd
-ttyd web-terminal demon running on kali instance
 
-## Before getting started
+ttyd web-terminal demon running on kali instance. This can be used to share a bash shell from the docker instance as a web terminal.
 
-* Pull latest kali docker instance from dockerhub - `docker pull kalilinux/kali-rolling` 
+### Before building the docker file
 
-## How to build
+* Pull latest kali docker instance from dockerhub - `docker pull kalilinux/kali-rolling`
 
-Image name and version aren't provided in the Dockerfile so do `docker build -t ttyd/test:v1`
+* if you want to use ubuntu as your container base - you can do `docker pull ubuntu` and switch to `ubuntu-docker` as the working directory
+
+### How to build
+
+Image name and version aren't provided in the Dockerfile so do 
+
+``` docker build -t ttyd/test:v1 ```
+
+### Run docker
+
+This will forward port 80 of docker to port 8080 of host
+
+``` docker run -p 8080:80 --name ttyd -it ttyd/test:v1 bash ```
+
+### ttyd options
+
+ttyd is made to run with credentials user:pass as 123:123. So if you want to change it see `run_ttyd.sh`
