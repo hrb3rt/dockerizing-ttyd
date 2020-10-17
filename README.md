@@ -12,7 +12,7 @@ ttyd web-terminal demon running on kali instance. This can be used to share a ba
 
 Image name and version aren't provided in the Dockerfile so do 
 
-``` docker build -t ttyd/test:v1 ```
+``` docker build -t ttyd/test:v1 .```
 
 ### Run docker
 
