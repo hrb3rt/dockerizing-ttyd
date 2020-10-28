@@ -1,12 +1,12 @@
 # dockerizing-ttyd
 
-ttyd web-terminal demon running on kali instance. This can be used to share a bash shell from the docker instance as a web terminal.
+ttyd web-terminal demon running on ubuntu instance. This can be used share the docker bash shell as a web terminal.
 
 ### Before building the docker file
 
-* Pull latest kali docker instance from dockerhub - `docker pull kalilinux/kali-rolling`
+* if you want to use ubuntu as your container base - you can do `docker pull ubuntu`
 
-* if you want to use ubuntu as your container base - you can do `docker pull ubuntu` and switch to `ubuntu-docker` as the working directory
+* if not use kali docker instance from dockerhub - `docker pull kalilinux/kali-rolling`
 
 ### How to build
 

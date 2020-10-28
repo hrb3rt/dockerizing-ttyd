@@ -1,4 +1,4 @@
-FROM kalilinux/kali-rolling
+FROM ubuntu:18.04
 
 ENV TTY_VER 1.6.1
 
