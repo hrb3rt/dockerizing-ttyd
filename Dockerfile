@@ -13,7 +13,7 @@ RUN apt-get -y update && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
 
-RUN apt-get install sudo kali-tools-top10
+RUN apt-get -y install sudo kali-tools-top10
 
 COPY run_ttyd.sh /run_ttyd.sh
 
