@@ -12,8 +12,6 @@ RUN apt-get -y update && \
 
 RUN useradd -m ${USER} && echo "${USER}:${PASSWORD}" | chpasswd && adduser ${USER} sudo
 
-USER ${USER}
-
 RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
@@ -24,5 +22,5 @@ RUN echo 'Installing additional packages...' && \
 COPY run_ttyd.sh /run_ttyd.sh
 
 RUN chmod 744 /run_ttyd.sh
-
+USER ${USER}
 CMD ["/bin/bash","/run_ttyd.sh"]
