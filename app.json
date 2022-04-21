@@ -1,0 +1,11 @@
+{
+    "name": "Kali_Linux",
+    "description": "Kali Linux Docker TTYD, refer readme for more info.",
+    "repository": "https://github.com/hrb3rt/dockerizing-ttyd",
+    "logo": "https://imgr.search.brave.com/3V2JdgoM2dz3gMTZuB_QyexdYtjV5z9MZXNTnb21T4c/fit/474/225/no/1/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4w/ZlNQSEFCWENTM0FB/b2xLVEQ1UUhBSGFI/YSZwaWQ9QXBp",
+    "keywords": ["docker","kali", "vscode", "novnc", "firefox", "brave", "fluxbox", "linux", "remote", "ssh", "vnc", "linux"],
+    "stack": "container",
+    "env": {
+      
+    } 
+  }
