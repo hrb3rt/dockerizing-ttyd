@@ -10,9 +10,12 @@ RUN apt-get -y update && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
 
-RUN apt-get install \
-	kali-tools-headless \
-	-y --show-progress
+RUN echo 'Installing additional packages...' && \
+	export DEBIAN_FRONTEND=noninteractive && \
+	apt-get update && \
+	apt-get install \
+	kali-tools-top10 \
+	-y --show-progress && \
 
 COPY run_ttyd.sh /run_ttyd.sh
 
