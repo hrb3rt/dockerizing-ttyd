@@ -1,6 +1,11 @@
 FROM kalilinux/kali
 
 ENV TTY_VER 1.6.1
+ENV USER user
+ENV PASSWORD password
+
+RUN useradd -ms /bin/bash $USER
+RUN echo '$USER:$PASSWORD' | chpasswd
 
 RUN apt-get -y update && \
     apt-get install -y curl && \
