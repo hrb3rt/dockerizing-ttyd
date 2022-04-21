@@ -5,12 +5,14 @@ ENV USER kali
 ENV PASSWORD kali
 
 RUN apt-get -y update && \
-    apt-get install -y curl && \
+    apt-get install -y curl sudo && \
     curl -sLk https://github.com/tsl0922/ttyd/releases/download/${TTY_VER}/ttyd_linux.x86_64 -o ttyd_linux && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
 
-RUN apt-get -y install sudo kali-linux-headless
+RUN apt-get install \
+	kali-tools-headless \
+	-y --show-progress
 
 COPY run_ttyd.sh /run_ttyd.sh
 
