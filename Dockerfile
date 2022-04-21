@@ -1,11 +1,8 @@
 FROM kalilinux/kali
 
 ENV TTY_VER 1.6.1
-ENV USER user
-ENV PASSWORD password
-
-RUN useradd -ms /bin/bash ${USER}
-RUN echo "${USER}:${PASSWORD}" | chpasswd
+ENV USER kali
+ENV PASSWORD kali
 
 RUN apt-get -y update && \
     apt-get install -y curl && \
@@ -13,7 +10,7 @@ RUN apt-get -y update && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
 
-RUN apt-get -y install sudo kali-tools-top10
+RUN apt-get -y install sudo kali-linux-headless
 
 COPY run_ttyd.sh /run_ttyd.sh
 
