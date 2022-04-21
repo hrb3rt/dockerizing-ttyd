@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM kalilinux/kali
 
 ENV TTY_VER 1.6.1
 
@@ -14,7 +14,5 @@ RUN apt-get -y update && \
 COPY run_ttyd.sh /run_ttyd.sh
 
 RUN chmod 744 /run_ttyd.sh
-
-EXPOSE 80
 
 CMD ["/bin/bash","/run_ttyd.sh"]
