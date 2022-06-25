@@ -16,8 +16,8 @@ RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
 	apt-get install \
-	kali-tools-database \
-	openvpn \
+	kali-tools-top10 \
+	tmux \
 	-y --show-progress 
 
 COPY run_ttyd.sh /run_ttyd.sh
