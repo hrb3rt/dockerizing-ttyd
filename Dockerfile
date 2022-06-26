@@ -1,8 +1,6 @@
 FROM kalilinux/kali-rolling
 
 ENV TTY_VER 1.6.1
-ENV USER kali
-ENV PASSWORD kali
 
 RUN apt-get -y update && \
     apt-get install -y curl sudo && \
@@ -16,8 +14,11 @@ RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
 	apt-get install \
-	kali-tools-database \
+	vim \
 	tmux \
+	git \
+	python3 \
+	neofetch
 	-y --show-progress 
 
 COPY run_ttyd.sh /run_ttyd.sh
