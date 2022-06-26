@@ -8,8 +8,6 @@ RUN apt-get -y update && \
     chmod +x ttyd_linux && \
     cp ttyd_linux /usr/local/bin/
 
-RUN useradd -m ${USER} && echo "${USER}:${PASSWORD}" | chpasswd && adduser ${USER} sudo
-
 RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
