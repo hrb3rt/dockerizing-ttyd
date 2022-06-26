@@ -16,7 +16,7 @@ RUN echo 'Installing additional packages...' && \
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt-get update && \
 	apt-get install \
-	kali-tools-top10 \
+	kali-tools-database \
 	tmux \
 	-y --show-progress 
 
