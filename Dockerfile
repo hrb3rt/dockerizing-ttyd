@@ -22,5 +22,4 @@ RUN echo 'Installing additional packages...' && \
 COPY run_ttyd.sh /run_ttyd.sh
 
 RUN chmod 744 /run_ttyd.sh
-USER ${USER}
 CMD ["/bin/bash","/run_ttyd.sh"]
