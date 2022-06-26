@@ -18,7 +18,7 @@ RUN echo 'Installing additional packages...' && \
 	tmux \
 	git \
 	python3 \
-	neofetch
+	neofetch \
 	-y --show-progress 
 
 COPY run_ttyd.sh /run_ttyd.sh
